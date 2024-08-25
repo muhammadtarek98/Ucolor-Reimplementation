@@ -668,7 +668,7 @@ class _equalized_deconv2d(nn.Module):
         if self.use_bias:
             self.bias = nn.Parameter(torch.FloatTensor(c_out).fill_(0))
 
-        fan_in = c_in  # value of fan_in for deconv
+        fan_in = c_in  # value of fan_in for deconvolution_block
         self.scale = np.sqrt(2) / np.sqrt(fan_in)
 
     def forward(self, x):
